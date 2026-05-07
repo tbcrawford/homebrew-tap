@@ -5,12 +5,12 @@
 class Opm < Formula
   desc "OpenCode profile manager — switch configs like docker context"
   homepage "https://github.com/tbcrawford/opm"
-  version "1.1.0"
+  version "1.2.0"
   license "MIT"
 
   on_macos do
-    url "https://github.com/tbcrawford/opm/releases/download/v1.1.0/opm_1.1.0_darwin_all.tar.gz"
-    sha256 "c3ccb30333c7c806de03955126e83ce4b6ff52323c6b75f8852a8a88d2837f2e"
+    url "https://github.com/tbcrawford/opm/releases/download/v1.2.0/opm_1.2.0_darwin_all.tar.gz"
+    sha256 "bde4e39039d6af32fdf502eec9a862240cb35c94497e27636649990820b1003d"
 
     define_method(:install) do
       bin.install "opm"
@@ -19,15 +19,15 @@ class Opm < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/tbcrawford/opm/releases/download/v1.1.0/opm_1.1.0_linux_amd64.tar.gz"
-      sha256 "e715e07f77f3557079bb568701c251ee8e828b5c1d6727e26ecaef5fded090e1"
+      url "https://github.com/tbcrawford/opm/releases/download/v1.2.0/opm_1.2.0_linux_amd64.tar.gz"
+      sha256 "deda4b2bc25901596a5616186499a9436174274c2d7404fbc71a4752096ed41b"
       define_method(:install) do
         bin.install "opm"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/tbcrawford/opm/releases/download/v1.1.0/opm_1.1.0_linux_arm64.tar.gz"
-      sha256 "91d2603a93496dd46f3e0b3ffd689a51e395bb4e15b0f79ef4f7a5e14101ef98"
+      url "https://github.com/tbcrawford/opm/releases/download/v1.2.0/opm_1.2.0_linux_arm64.tar.gz"
+      sha256 "4723a7385d9288219550e60392f911abd4cd5a5c2941404a21d060eb4ecd4fd0"
       define_method(:install) do
         bin.install "opm"
       end
